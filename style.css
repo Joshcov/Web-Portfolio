@@ -44,15 +44,17 @@ nav ul li a{
 
 nav ul li a:hover{
     color: darkcyan;
+    border-bottom: darkcyan 2px solid;
     transition: .3s;
 }
+
 
 button{
     border: none;
     background: deepskyblue;
     padding: 12px 30px;
     border-radius: 30px;
-    color: black;
+    color: ;
     font-weight: bold;
     font-size: 15px;
     transition: .4s;
@@ -76,5 +78,45 @@ button:hover{
     padding-top: 10px;
     padding-left: 30px;
     color: deepskyblue;
-    font-weight: bold;
+    font-size: large;
+}
+
+.details p span{
+    color: black;
+}
+
+.images{
+    width: 30%;
+    height: 70%;
+    position: absolute;
+    bottom: 0;
+    right: 100px;
+    padding-bottom: 20px;
+    margin-bottom: 10px;
+}
+
+.images img{
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    transition: bottom 1s, left 1s;
+}
+
+.images:hover .shape{
+    bottom: 40px;
+}
+
+.images:hover .photo{
+    left: 45%;
+}
+
+/* About */
+.about-section{
+    height: 100vh;
+    width: 100%;
+    background-color: deepskyblue;
+    background-size: cover;
+    background-position: center;
 }
