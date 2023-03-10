@@ -15,6 +15,7 @@ body{
 
 /* Logo & nav  */
 .hero{
+    flex-wrap: wrap;
     height: 100vh;
     width: 100%;
     background-image: url(./imgs/Main-choice.jpg);
@@ -102,11 +103,19 @@ buttom:hover{
     75%{
         transform: scale(0.7,1.2);
     }
-
-   /* FRONTEND DEVELOPER & Welcome text */
 }
-.details h1 {
+
+/* FRONTEND DEVELOPER & Welcome text */
+
+.details-flex-left{
     display: flex;
+    flex-direction: column;
+    max-width: 50%;
+}
+
+.details-flex-left h1 {
+    /* flex: 50%;
+    flex-direction: row; */
     text-align: left;
     padding-top: 15%;
     padding-left: 25px;
@@ -114,29 +123,38 @@ buttom:hover{
     margin-bottom: 30px;
 }
 
-.details p{
-    text-align: left;
+.details-flex-left p{
+    /* flex: 50%;
+    text-align: left; */
     padding-top: 10px;
     padding-left: 30px;
+    margin: auto;
     color: deepskyblue;
     font-size: large;
 }
 
-.details p span{
+.details-flex-left p span{
     color: black;
 }
+
+@media screen and (min-width: 768px) {
+    .details-flex-left {
+        flex-direction: column;
+    }
+}
 /* Shape and Photo  */
-.images{
+.images-flex-right{
     width: 37%;
-    height: 79%;
+    height: 90%;
     position: absolute;
-    bottom: 0;
-    right: 100px;
+    right: 20px;
     padding-bottom: 20px;
     margin-bottom: 15px;
 }
 
-.images img{
+.images-flex-right img{
+    flex: 50%;
+    flex-direction: column;
     height: 100%;
     position: absolute;
     left: 50%;
@@ -145,107 +163,19 @@ buttom:hover{
     transition: bottom 1s, left 1s;
 }
 
-.images .photo{
-    padding-bottom: 20px;
+.images-flex-right .photo{
+    flex: 100%;
+    flex-direction: column;
+    padding-bottom: 50px;
     border-radius: 45%;
+    margin: auto;
 }
 
-.images:hover .shape{
+/* .images-flex-right:hover .shape{
     bottom: 40px;
-}
+} */
 
-.images:hover .photo{
+.images-flex-right:hover .photo{
     left: 45%;
 }
 
-/* About-section color background */
-.about-section{
-    height: 100vh;
-    background-color: deepskyblue;
-    display: grid;
-    background-size: cover;
-    background-position: center;
-}
-/* About color text */
-.about-main{
-    color: #fff;
-    font-size: 9vh;
-    padding-top: 65px;
-    margin-left: 38px;
-    
-}
-
-/* About column-1 & text  */
-#container{
-    /* width: 900px; */
-    margin-left: 30px;
-}
-
-.column-1{
-    /* width: 280px; */
-    float: left;
-    margin: 10px;
-}
-
-.column-1 p{
-    color: rgb(83, 75, 75);
-    text-align: left;
-    font-size: large;
-}
-
-/* music player */
- .row{
-    width: 80%;
-    max-width: 1170px;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 50px 30px;
- }
-
- .row .left{
-    overflow: hidden;
- }
-
- .row .left img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
- }
-
- .row .right{
-    display: flex;
-    align-items: center;
- }
-
- .row .right .content{
-    padding-left: 20px;
- }
-
- .row .right .content p{
-    font-size: 16px;
-    line-height: 26px;
-    padding-bottom: 15px;
-    margin-left: 20px;
- }
-
- @media (max-width:991px) {
-    .row .right .content{
-        padding-left: 0;
-     }
- }
-
- @media (max-width: 768px) {
-    .row{
-        width: 90%;
-        grid-template-columns: 1fr
-     }
-    
- }
-
- .row .cal img{
-    width: 90%;
-    height: 100%;
-    object-fit: cover;
-    padding-top: 70px;
-    padding-left: 70px;
- }
